@@ -72,13 +72,13 @@
         </div>
         <div class="modal-body">
           <form id="alumno-form">
-            <input type="text" id="number" placeholder="Cedula" required pattern="[0-9]+"
-            title="Ingresa una cedula válida (solo números)">
-            <input type="text" pattern="[a-zA-Z\s]+" placeholder="Nombre"
-            title="Ingresa un nombre válido (solo letras y espacios)" id="nombre" required>
-            <input type="number" id="matematicas" placeholder="Nota de Matematicas" min="0" max="20" required>
-            <input type="number" id="fisica" placeholder="Nota de Fisica" min="0" max="20" required>
-            <input type="number" id="programacion" placeholder="Nota de Programacion" min="0" max="20" required>
+            <input type="text" class="form-control" id="cedula" required pattern="[0-9]+" placeholder="Cedula" 
+              title="Ingresa una cedula válida (solo números)"> <br>
+            <input type="text" class="form-control" pattern="[a-zA-Z\s]+" placeholder="Nombre"
+              title="Ingresa un nombre válido (solo letras y espacios)" id="nombre" required><br>
+            <input type="number" class="form-control" id="matematicas" placeholder="Nota de Matematicas" min="0" max="20" required><br>
+            <input class="form-control" type="number" placeholder="Nota de Fisica" id="fisica" min="0" max="20" required><br>
+            <input class="form-control" type="number" id="programacion"  placeholder="Nota de Programacion" min="0" max="20" required>
             <!-- <div class="inputBox"> -->
               <!-- <i></i> -->
             <!-- </div> -->
@@ -143,7 +143,7 @@
 
           </tbody>
           <tfoot>
-            <tr class="total-row">
+            <tr class="total-row" style="display:none">
               <th>Total</th>
               <th></th>
               <th id="total-matematicas"></th>
@@ -186,16 +186,20 @@
           <b>
             <h2>Aprobados:</h2>
           </b>
-          <div class="alert alert-dark" role="alert">Matematicas: <span id="aprobados-matematicas"></span> </div>
-          <div class="alert alert-dark" role="alert">Fisica: <span id="aprobados-fisica"></span></span> </div>
-          <div class="alert alert-dark" role="alert">Programacion: <span id="aprobados-programacion"></span> </div>
+          <b>
+          <div class="alert alert-dark" role="alert">Matematicas: <div id="aprobados-matematicas"></div> </div>
+          <div class="alert alert-dark" role="alert">Fisica: <div id="aprobados-fisica"></div></div>
+          <div class="alert alert-dark" role="alert">Programacion: <div id="aprobados-programacion"></div> </div>
+          </b>
           <b>
             <h2>Reprobados:</h2>
           </b>
-          <div class="alert alert-dark" role="alert">Matematicas: <span id="reprobados-matematicas"></span> </div>
-          <div class="alert alert-dark" role="alert">Fisica: <span id="reprobados-fisica"></span> </div>
-          <div class="alert alert-dark" role="alert">Fisica: <span id="reprobados-programacion"></span> </div>
-        </div>
+          <b>
+            <div class="alert alert-dark" role="alert">Matematicas: <div id="reprobados-matematicas"></div> </div>
+            <div class="alert alert-dark" role="alert">Fisica: <div id="reprobados-fisica"></div> </div>
+            <div class="alert alert-dark" role="alert">Fisica: <div id="reprobados-programacion"></div> </div>
+          </b>
+        </div>div
 
       </div>
     </div>
