@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registro de Alumnos</title>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js"
+    integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content box">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel">Registro de alumnos</h2>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="alumno-form" class="form" >
+            <div class="inputBox">
+              <span>Cedula</span>
+              <input type="text" id="number" required pattern="[0-9]+" title="Ingresa una cedula válida (solo números)">
+              <i></i>
+            </div>
+            <div class="inputBox">
+              <span>Nombre</span>
+              <input type="text" pattern="[a-zA-Z\s]+" title="Ingresa un nombre válido (solo letras y espacios)" id="nombre" required>
+              <i></i>
+              
+            </div>
+            <div class="inputBox">
+              <span>Nota de Matematicas</span>
+              <input type="number" id="matematicas" min="0" max="20" required><br><br>
+              <i></i>
+            </div>
+            <div class="inputBox">
+              <span>Nota de Fisica</span>
+              <input type="number" id="fisica" min="0" max="20" required><br><br>
+              <i></i>
+            </div>
+            <div class="inputBox">
+              <span>Nota de Programacion</span>
+              <input type="number" id="programacion" min="0" max="20" required><br><br>
+              <i></i>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" form="alumno-form" id="guardar-btn">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Registro de Alumnos</h2>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Agregar Alumno
+        </button>
+        <table class="table table-dark" id="tabla-alumnos">
+          <thead>
+            <tr>
+              <th>Cedula</th>
+              <th>Nombre</th>
+              <th>Matematicas</th>
+              <th>Fisica</th>
+              <th>Programacion</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-alumnos">
+
+          </tbody>
+          <tfoot>
+            <tr class="total-row">
+              <th>Total</th>
+              <th></th>
+              <th id="total-matematicas"></th>
+              <th id="total-fisica"></th>
+              <th id="total-programacion"></th>
+            </tr>
+            <tr>
+              <th>Promedio</th>
+              <th></th>
+              <th id="promedio-matematicas"></th>
+              <th id="promedio-fisica"></th>
+              <th id="promedio-programacion"></th>
+            </tr>
+            <tr>
+              <th>Maxima Nota</th>
+              <th></th>
+              <th id="maxima-matematicas"></th>
+              <th id="maxima-fisica"></th>
+              <th id="maxima-programacion"></th>
+            </tr>
+            <tr>
+              <th>Aprobaron Todas las Materias</th>
+              <th id="aprobados-todas"></th>
+              <th colspan="3"></th>
+            </tr>
+            <tr>
+              <th>Aprobaron una Sola Materia</th>
+              <th id="aprobados-una"></th>
+              <th colspan="3"></th>
+            </tr>
+            <tr>
+              <th>Aprobaron Dos Materias</th>
+              <th id="aprobados-dos"></th>
+              <th colspan="3"></th>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div>
+          <b>
+            <h2>Aprobados:</h2>
+          </b>
+            <div class="alert alert-dark" role="alert">Matematicas: <span id="aprobados-matematicas"></span> </div>
+            <div class="alert alert-dark" role="alert">Fisica:  <span id="aprobados-fisica"></span></span> </div>
+            <div class="alert alert-dark" role="alert">Programacion: <span id="aprobados-programacion"></span> </div>
+          <b>
+            <h2>Reprobados:</h2>
+          </b>
+          <div class="alert alert-dark" role="alert">Matematicas: <span id="reprobados-matematicas"></span> </div>
+          <div class="alert alert-dark" role="alert">Fisica: <span id="reprobados-fisica"></span> </div>
+          <div class="alert alert-dark" role="alert">Fisica: <span id="reprobados-programacion"></span> </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Programa de Notas</title>
+
+    <link rel="stylesheet" href="./estilos.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <h1>Programa de Notas</h1>
+
+    <form id="alumno-form" method="post">
+        <h2>Registro de Usuarios</h2>
+        <div class="inputBox">
+            <input type="number" id="cedula" name="cedula" required />
+            <span>Cedula</span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="text" id="nombre" name="nombre" required>
+            <span>Nombre</span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="number" id="matematica" name="matematica" required>
+            <span>Nota de Matematicas</span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="number" id="fisica" name="fisica" required>
+            <span>Nota de Fisica</span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="number" id="programacion" name="programacion" required>
+            <span>Nota de Programación</span>
+            <i></i>
+        </div>
+        <input type="submit" form="alumno-form" value="Registrar" />
+    </form>
+
+</body>
+
+</html> -->
