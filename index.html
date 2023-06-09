@@ -18,51 +18,6 @@
 
 <body>
 
-  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content box">
-        <div class="modal-header">
-          <h2 class="modal-title" id="exampleModalLabel">Registro de alumnos</h2>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="alumno-form" class="form" >
-            <div class="inputBox">
-              <span>Cedula</span>
-              <input type="text" id="number" required pattern="[0-9]+" title="Ingresa una cedula válida (solo números)">
-              <i></i>
-            </div>
-            <div class="inputBox">
-              <span>Nombre</span>
-              <input type="text" pattern="[a-zA-Z\s]+" title="Ingresa un nombre válido (solo letras y espacios)" id="nombre" required>
-              <i></i>
-              
-            </div>
-            <div class="inputBox">
-              <span>Nota de Matematicas</span>
-              <input type="number" id="matematicas" min="0" max="20" required><br><br>
-              <i></i>
-            </div>
-            <div class="inputBox">
-              <span>Nota de Fisica</span>
-              <input type="number" id="fisica" min="0" max="20" required><br><br>
-              <i></i>
-            </div>
-            <div class="inputBox">
-              <span>Nota de Programacion</span>
-              <input type="number" id="programacion" min="0" max="20" required><br><br>
-              <i></i>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" form="alumno-form" id="guardar-btn">Guardar</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content box">
@@ -79,38 +34,6 @@
             <input type="number" class="form-control" id="matematicas" placeholder="Nota de Matematicas" min="0" max="20" required><br>
             <input class="form-control" type="number" placeholder="Nota de Fisica" id="fisica" min="0" max="20" required><br>
             <input class="form-control" type="number" id="programacion"  placeholder="Nota de Programacion" min="0" max="20" required>
-            <!-- <div class="inputBox"> -->
-              <!-- <i></i> -->
-            <!-- </div> -->
-            <!-- <div class="inputBox"> -->
-              <!-- <span>Nombre</span> -->
-              <!-- <i></i> -->
-            <!-- </div> -->
-            <!-- <div class="inputBox"> -->
-              <!-- <span>Nota de Matematicas</span> -->
-              <!-- <i></i> -->
-            <!-- </div> -->
-            <!-- <div class="inputBox"> -->
-              <!-- <span>Nota de Fisica</span> -->
-              <!-- <i></i> -->
-            <!-- </div> -->
-            <!-- <div class="inputBox"> -->
-              <!-- <span>Nota de Programacion</span> -->
-              <!-- <i></i> -->
-            <!-- </div> -->
-
-            <!-- <span>Cedula</span>
-            <input type="text"  id="cedula" required pattern="[0-9]+"
-              title="Ingresa una cedula válida (solo números)"><br><br>
-            <span>Nombre</span>
-            <input type="text" class="form-control" pattern="[a-zA-Z\s]+"
-              title="Ingresa un nombre válido (solo letras y espacios)" id="nombre" required><br><br>
-            <span>Nota de Matematicas</span>
-            <input type="number" class="form-control" id="matematicas" min="0" max="20" required><br><br>
-            <span>Nota de Fisica</span>
-            <input class="form-control" type="number" id="fisica" min="0" max="20" required><br><br>
-            <span>Nota de Programacion</span>
-            <input class="form-control" type="number" id="programacion" min="0" max="20" required><br><br> -->
           </form>
         </div>
         <div class="modal-footer">
@@ -199,7 +122,7 @@
             <div class="alert alert-dark" role="alert">Fisica: <div id="reprobados-fisica"></div> </div>
             <div class="alert alert-dark" role="alert">Fisica: <div id="reprobados-programacion"></div> </div>
           </b>
-        </div>div
+        </div>
 
       </div>
     </div>
@@ -208,55 +131,3 @@
 </body>
 
 </html>
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <title>Programa de Notas</title>
-
-    <link rel="stylesheet" href="./estilos.css">
-    <script src="script.js"></script>
-
-</head>
-
-<body>
-    <h1>Programa de Notas</h1>
-
-    <form id="alumno-form" method="post">
-        <h2>Registro de Usuarios</h2>
-        <div class="inputBox">
-            <input type="number" id="cedula" name="cedula" required />
-            <span>Cedula</span>
-            <i></i>
-        </div>
-        <div class="inputBox">
-            <input type="text" id="nombre" name="nombre" required>
-            <span>Nombre</span>
-            <i></i>
-        </div>
-        <div class="inputBox">
-            <input type="number" id="matematica" name="matematica" required>
-            <span>Nota de Matematicas</span>
-            <i></i>
-        </div>
-        <div class="inputBox">
-            <input type="number" id="fisica" name="fisica" required>
-            <span>Nota de Fisica</span>
-            <i></i>
-        </div>
-        <div class="inputBox">
-            <input type="number" id="programacion" name="programacion" required>
-            <span>Nota de Programación</span>
-            <i></i>
-        </div>
-        <input type="submit" form="alumno-form" value="Registrar" />
-    </form>
-
-</body>
-
-</html> -->
